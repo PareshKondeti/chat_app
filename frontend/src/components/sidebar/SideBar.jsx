@@ -1,12 +1,15 @@
-const Home = () => {
+import Conversations from "./Conversations";
+import LogoutButton from "./LogoutButton";
+import SearchInput from "./SearchInput";
+
+const Sidebar = () => {
 	return (
-		<div className='flex h-[70vh] sm:h-[70vh] md:h-[70vh] w-full rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 py-4 mx-auto'>
-			{/* Sidebar Component */}
-			<Sidebar />
-			{/* Message Container */}
-			<MessageContainer />
+		<div className='border-r border-slate-500 p-4 flex flex-col'>
+			<SearchInput />
+			<div className='divider px-3'></div>
+			<Conversations />
+			<LogoutButton />
 		</div>
 	);
 };
-
-export default Home;
+export default Sidebar;
